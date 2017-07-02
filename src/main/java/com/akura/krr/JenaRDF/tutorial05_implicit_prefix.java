@@ -12,7 +12,8 @@ public class tutorial05_implicit_prefix extends Object {
 
     public static void main(String[] args) {
         Model m2 = ModelFactory.createDefaultModel();
-        m2.read( "file:/tmp/fragment.rdf" );
+        m2.read( "file:fragment.rdf" );
+        m2.removeNsPrefix("nsA");
         m2.write( System.out );
     }
 }

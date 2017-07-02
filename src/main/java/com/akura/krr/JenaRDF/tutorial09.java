@@ -35,7 +35,10 @@ public class tutorial09 extends Object {
         model2.read( in2, "" );
 
         // merge the graphs
-        Model model = model1.difference(model2);
+        Model model = model1.union(model2);
+
+        // difference
+        Model model3 = model1.difference(model2);
 
         // print the graph as RDF/XML
         model.write(System.out, "RDF/XML-ABBREV");

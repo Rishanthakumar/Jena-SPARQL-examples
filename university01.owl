@@ -1,0 +1,276 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.akura.com/review.owl#"
+     xml:base="http://www.akura.com/review.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:review="http://www.akura.com/review.owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.akura.com/review.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.akura.com/review.owl#studies -->
+
+    <owl:ObjectProperty rdf:about="http://www.akura.com/review.owl#studies">
+        <rdfs:domain rdf:resource="http://www.akura.com/review.owl#Student"/>
+        <rdfs:range rdf:resource="http://www.akura.com/review.owl#Module"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.akura.com/review.owl#teaches -->
+
+    <owl:ObjectProperty rdf:about="http://www.akura.com/review.owl#teaches">
+        <rdfs:domain rdf:resource="http://www.akura.com/review.owl#Lecturer"/>
+        <rdfs:range rdf:resource="http://www.akura.com/review.owl#Module"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.akura.com/review.owl#first_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.akura.com/review.owl#first_name">
+        <rdfs:domain rdf:resource="http://www.akura.com/review.owl#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.akura.com/review.owl#last_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.akura.com/review.owl#last_name">
+        <rdfs:domain rdf:resource="http://www.akura.com/review.owl#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.akura.com/review.owl#staffID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.akura.com/review.owl#staffID">
+        <rdfs:domain rdf:resource="http://www.akura.com/review.owl#Lecturer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.akura.com/review.owl#studentID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.akura.com/review.owl#studentID">
+        <rdfs:domain rdf:resource="http://www.akura.com/review.owl#Student"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.akura.com/review.owl#CSModule -->
+
+    <owl:Class rdf:about="http://www.akura.com/review.owl#CSModule">
+        <rdfs:subClassOf rdf:resource="http://www.akura.com/review.owl#Module"/>
+        <owl:disjointWith rdf:resource="http://www.akura.com/review.owl#MathModule"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.akura.com/review.owl#Lecturer -->
+
+    <owl:Class rdf:about="http://www.akura.com/review.owl#Lecturer">
+        <rdfs:subClassOf rdf:resource="http://www.akura.com/review.owl#Person"/>
+        <owl:disjointWith rdf:resource="http://www.akura.com/review.owl#MathModule"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.akura.com/review.owl#MathModule -->
+
+    <owl:Class rdf:about="http://www.akura.com/review.owl#MathModule">
+        <rdfs:subClassOf rdf:resource="http://www.akura.com/review.owl#Module"/>
+        <owl:disjointWith rdf:resource="http://www.akura.com/review.owl#Student"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.akura.com/review.owl#Module -->
+
+    <owl:Class rdf:about="http://www.akura.com/review.owl#Module"/>
+    
+
+
+    <!-- http://www.akura.com/review.owl#Person -->
+
+    <owl:Class rdf:about="http://www.akura.com/review.owl#Person"/>
+    
+
+
+    <!-- http://www.akura.com/review.owl#Student -->
+
+    <owl:Class rdf:about="http://www.akura.com/review.owl#Student">
+        <rdfs:subClassOf rdf:resource="http://www.akura.com/review.owl#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.akura.com/review.owl#CS101 -->
+
+    <owl:NamedIndividual rdf:about="http://www.akura.com/review.owl#CS101">
+        <rdf:type rdf:resource="http://www.akura.com/review.owl#CSModule"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.akura.com/review.owl#CS103 -->
+
+    <owl:NamedIndividual rdf:about="http://www.akura.com/review.owl#CS103">
+        <rdf:type rdf:resource="http://www.akura.com/review.owl#CSModule"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.akura.com/review.owl#Lecturer1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.akura.com/review.owl#Lecturer1">
+        <rdf:type rdf:resource="http://www.akura.com/review.owl#Lecturer"/>
+        <teaches rdf:resource="http://www.akura.com/review.owl#CS101"/>
+        <teaches rdf:resource="http://www.akura.com/review.owl#M201"/>
+        <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kamal</first_name>
+        <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wijesinghe</last_name>
+        <staffID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1232443</staffID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.akura.com/review.owl#Lecturer2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.akura.com/review.owl#Lecturer2">
+        <rdf:type rdf:resource="http://www.akura.com/review.owl#Lecturer"/>
+        <teaches rdf:resource="http://www.akura.com/review.owl#CS103"/>
+        <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nimal</first_name>
+        <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sundarasivam</last_name>
+        <staffID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">43242342</staffID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.akura.com/review.owl#M201 -->
+
+    <owl:NamedIndividual rdf:about="http://www.akura.com/review.owl#M201">
+        <rdf:type rdf:resource="http://www.akura.com/review.owl#MathModule"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.akura.com/review.owl#M204 -->
+
+    <owl:NamedIndividual rdf:about="http://www.akura.com/review.owl#M204">
+        <rdf:type rdf:resource="http://www.akura.com/review.owl#MathModule"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.akura.com/review.owl#Student1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.akura.com/review.owl#Student1">
+        <rdf:type rdf:resource="http://www.akura.com/review.owl#Student"/>
+        <studies rdf:resource="http://www.akura.com/review.owl#CS101"/>
+        <studies rdf:resource="http://www.akura.com/review.owl#M201"/>
+        <studies rdf:resource="http://www.akura.com/review.owl#M204"/>
+        <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jason</first_name>
+        <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Satham</last_name>
+        <studentID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12324</studentID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.akura.com/review.owl#Student2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.akura.com/review.owl#Student2">
+        <rdf:type rdf:resource="http://www.akura.com/review.owl#Student"/>
+        <studies rdf:resource="http://www.akura.com/review.owl#M204"/>
+        <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David</first_name>
+        <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sunil</last_name>
+        <studentID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">132314</studentID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.akura.com/review.owl#Student3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.akura.com/review.owl#Student3">
+        <rdf:type rdf:resource="http://www.akura.com/review.owl#Student"/>
+        <studies rdf:resource="http://www.akura.com/review.owl#CS101"/>
+        <studies rdf:resource="http://www.akura.com/review.owl#M201"/>
+        <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bimal</first_name>
+        <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Balumahendra</last_name>
+        <studentID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1234532</studentID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.akura.com/review.owl#CSModule"/>
+            <rdf:Description rdf:about="http://www.akura.com/review.owl#Lecturer"/>
+            <rdf:Description rdf:about="http://www.akura.com/review.owl#Student"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

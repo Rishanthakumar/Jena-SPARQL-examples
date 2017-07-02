@@ -13,3 +13,5 @@ buildNumber.properties
 ### IDE RELATED
 .idea
 
+
+.DS_Store

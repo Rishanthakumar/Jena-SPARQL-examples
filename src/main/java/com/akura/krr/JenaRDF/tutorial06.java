@@ -35,6 +35,7 @@ public class tutorial06 extends Object {
         // retrieve the Adam Smith vcard resource from the model
         Resource vcard = model.getResource(johnSmithURI);
 
+
         // retrieve the value of the N property
         Resource name = vcard.getRequiredProperty(VCARD.N)
                         .getResource();
@@ -47,6 +48,7 @@ public class tutorial06 extends Object {
 
         String fullname = vcard.getProperty(VCARD.FN)
                                 .getString();
+
 
         // add two nick name properties to vcard
 
